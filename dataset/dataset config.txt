@@ -1,0 +1,3 @@
+download the dataset from this location - 
+
+http://yann.lecun.com/exdb/mnist/
