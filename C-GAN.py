@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 
 # Conditional-GAN
-
 
 import numpy as np
 import tensorflow as tf
@@ -115,6 +113,7 @@ X_train = X.astype('float32') / 255.
 
 n_batches = len(X_train) // batch_size
 
+# training the C-GAN
 for e in range(epochs):
     for i in range(n_batches):
         x_batch = X_train[i * batch_size:(i + 1) * batch_size]
@@ -138,6 +137,8 @@ for e in range(epochs):
             print("Epoch-{} Step-{} Generator loss-{} Discriminator loss-{}".format(e, i, gen_loss_batch,
                                                                                     disc_loss_batch))
 
+
+# testing the model by plotting digit construction
 Z_sample = np.random.uniform(0., 1., size=[1, z_dimension])
 y_label = np.zeros(shape=[1, 10])
 y_label[:, 2] = 1
