@@ -77,16 +77,20 @@ ELBO = expected log likelihood + KL divergence
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
 
 ## Gaussian Mixture Model
+Gaussian Mixture Models (GMMs) assume that there are a certain number of Gaussian distributions from which all the data points are generated.
+
 It is basically a latent variable model, we try to model z, "z" latent variable represents basically which cluster data belong to.
 
-Gaussian Mixture Model(GMM) are trained using expectation-maximization(EM), we use EM for latent variable. Goal is to improv3e likelihood at each step.
+GMM are trained using expectation-maximization(EM), we use EM for latent variable. The goal is to improve likelihood at each step.
+
+In the below example, I randomly generated three data clusters and let GMM iteratively model the distribution.
 > Result 
 
 <p align="center"><img src="/images/gmm syn.png"></p>
 
 ### With MNIST
 
-We have used a mixture of gaussians to fit, so that may sample better digits (less blurry).
+I have used a mixture of gaussians to fit, so that I sampled better digits (less blurry than bayes).
 
 > Result 
 
@@ -95,7 +99,7 @@ We have used a mixture of gaussians to fit, so that may sample better digits (le
 Reference - http://www.cse.psu.edu/~rtc12/CSE586Spring2010/papers/prmlMixturesEM.pdf
 
 ## Sampling from Bayes classifier
-We have fitted a single gaussian in multi model distribution that is why the generated images are somewhat blurry.
+Using the Bayesian theorem as the basis, for each class y (digit class), we model p(x|y) rather than directly modeling p(y|x). In this, we found mean and covariance corresponding to each class in the dataset, then for sampling, for each category, we pick the class, and we have defined in such a way that p(x|y) is a gaussian, so we sample from this particular class gaussian.
 
 > Result 
 
