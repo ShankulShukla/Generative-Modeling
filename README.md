@@ -38,8 +38,22 @@ Reference - https://www.jeremyjordan.me/autoencoders/
 
 ## Variational Autoencoder
 <p align="center"><i>Variational Autoencoder = variational inference + autoencoders </i></p>
-<p align="center"><img src="/images/vae-priors.png" height="220px" width="220px">   <img src="/images/vae-reconstructions.png" height="220px" width="220px"></p>
 
+Variational Autoencoder (VAE) gives precise control over your latent representations and what we would like them to represent, but vanilla autoencoders does not.
+
+In VAE, we are learn the distribution, in the bottleneck, then we sample from this distribution as a input to decoder. So, encoder output is not a value but a distribution.
+
+In VAE, our objective function is elbo - evidence lower bound, we want to maximize the ELBO, therefore our "cost" (we want to minimize) is (-ELBO).
+
+ELBO = expected log likelihood + KL divergence
+
+> Result 
+
+- Prior predictive samples (compared sample and the mean from which sample generated)
+<p align="center"><img src="/images/vae-priors.png" height="300px" width="350px"></p>
+
+- Compared original and reconstruction 
+<p align="center"><img src="/images/vae-reconstructions.png" height="300px" width="350px"></p>
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
 
 ## Gaussian Mixture Model
