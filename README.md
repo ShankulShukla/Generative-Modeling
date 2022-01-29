@@ -15,6 +15,8 @@ Game - generator job is to fool discriminator .. discrimator is to classify corr
 
 In GAN, we donot have any control on type of image generated, control on output disadvantage of GANs. CGAN tackles this by inserting label information. So, in cost fucntion we insert condition of label, i.e., we use conditional probability in cost, conditioned on the label y.
 
+> Result 
+
 <p align="center"><img src="/images/MNIST_cGAN_generation_animation.gif" height="400px" width="400px"></p>
 
 Reference - https://arxiv.org/abs/1411.1784
@@ -22,6 +24,8 @@ Reference - https://arxiv.org/abs/1411.1784
 ## Deep Convolutional Generative Adversarial Network
 
 Features in DCGAN include batch normalization (adaptive normalisation of data at each layer), conv-> conv-> conv (it is a all convolutional network), adam optimizer, leaky relu for discriminator, for upsampling we use fractionally strided convolution: conv2d transpose does this.
+
+> Result 
 
 <p align="center"><img src="/images/MNIST_DCGAN_15.png" height="400px" width="400px"></p>
 
@@ -66,17 +70,26 @@ ELBO = expected log likelihood + KL divergence
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
 
 ## Gaussian Mixture Model
+
+> Result 
+
 <p align="center"><img src="/images/gmm syn.png"></p>
 
 ### With MNIST
 
 We have used a mixture of gaussians to fit, so that may sample better digits (less blurry).
+
+> Result 
+
 <p align="center"><img src="/images/gmm mnist1.png"><img src="/images/gmm mnist2.png"><img src="/images/gmm mnist3.png"></p>
 
 Reference - http://www.cse.psu.edu/~rtc12/CSE586Spring2010/papers/prmlMixturesEM.pdf
 
 ## Sampling from Bayes classifier
 We have fitted a single gaussian in multi model distribution that is why the generated images are somewhat blurry.
+
+> Result 
+
 <p align="center"><img src="/images/bayes1.png"></p>
 <p align="center"><img src="/images/bayes2.png"></p>
 
