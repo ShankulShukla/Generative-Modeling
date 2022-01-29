@@ -21,6 +21,7 @@ Reference - https://arxiv.org/abs/1511.06434
 
 ### Denoising Autoencoder
 <p align="center"><img src="/images/denoising auto.png" height="220px" width="220px"></p>
+<p align="center">Denoising the MNIST digits</p>
 
 Reference - https://www.jeremyjordan.me/autoencoders/
 
