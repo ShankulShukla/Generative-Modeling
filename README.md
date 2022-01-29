@@ -19,19 +19,25 @@ Reference - https://arxiv.org/abs/1411.1784
 Reference - https://arxiv.org/abs/1511.06434
 
 ## Autoencoder
+In this unsupervised learning technique, we impose a bottleneck in the neural network architecture which forces a compressed knowledge representation of the original input. Then we try to optimise this representation, by reconstructing the original image, minimizing the reconstruction error between original input image and its the consequent reconstruction. 
+
+> Result
+
 <p align="center"><img src="/images/autoencoderimg.png" height="400px" width="400px"></p>
 
 ### Denoising Autoencoder
-A denoising autoencoder processes a noisy image, generating a clean image on the output side.
+Autoencoders had generally performed weakly in generalizing the encoding and decoding. So, to obtain a generalizable model, we slightly corrupt the input data but still maintain the uncorrupted data as our target output. This way, our model is not just memorizing the data but learning the latent representation. A denoising autoencoder processes a noisy image, generating a clean image on the output side. I added random noise to training set images and let the autoencoder reconstruct the original clean image from it.
 
-In paper, [Extracting and Composing Robust Features with Denoising Autoencoders](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf), the authors repoted that "unsupervised initialization of layers with an explicit denoising criterion helps to capture interesting structure in the input distribution". They were able to improve the robustness of their internal layers of the network (i.e., latent-space representation) by deliberately introducing noise to their signal.
+In the paper, [Extracting and Composing Robust Features with Denoising Autoencoders](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf), the authors reported that "unsupervised initialization of layers with an explicit denoising criterion helps to capture interesting structure in the input distribution." Furthermore, they were able to improve the robustness of their internal network layers (i.e., latent-space representation) by deliberately introducing noise to their signal.
 
+> Result
 <p align="center"><img src="/images/denoising auto.png" height="220px" width="220px"></p>
 <p align="center">Denoising the MNIST digits</p>
 
 Reference - https://www.jeremyjordan.me/autoencoders/
 
 ## Variational Autoencoder
+<p align="center"><i>Variational Autoencoder = variational inference + autoencoders </i></p>
 <p align="center"><img src="/images/vae-priors.png" height="220px" width="220px">   <img src="/images/vae-reconstructions.png" height="220px" width="220px"></p>
 
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
