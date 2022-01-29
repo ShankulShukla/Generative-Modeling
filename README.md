@@ -2,7 +2,7 @@
 
 <p align="center"><i>"What I cannot create, I do not understand"</i> — Richard Feynman </p>
 
-Implementational study of various generative models to construct digits (MNIST)
+Modeling the environment is the most crucial and challenging aspect of a problem. For example, understanding how an unknown probabilistic distribution explains why some data points are likely to be found in specific circumstances and others are not. Our job is to build a model that mimics this distribution as closely as possible and then sample from it to generate new, distinct observations that look as if they are from the original data set. By doing this, we can create more realistic and thought-through solutions.
 
 ## Conditional Generative Adversarial Network
 <p align="center"><img src="/images/MNIST_cGAN_generation_animation.gif" height="400px" width="400px"></p>
