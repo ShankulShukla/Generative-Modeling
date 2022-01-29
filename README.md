@@ -1,4 +1,7 @@
 # Generative-Modeling
+
+<p align="center"><i>"What I cannot create, I do not understand"</i> — Richard Feynman </p>
+
 Implementational study of various generative models to construct digits (MNIST)
 
 ## Conditional Generative Adversarial Network
@@ -22,6 +25,6 @@ Implementational study of various generative models to construct digits (MNIST)
 ### With MNIST
 <p align="center"><img src="/images/gmm mnist1.png"><img src="/images/gmm mnist2.png"><img src="/images/gmm mnist3.png"></p>
 
-## Samplling from Bayes classifier
+## Sampling from Bayes classifier
 <p align="center"><img src="/images/bayes1.png"></p>
 <p align="center"><img src="/images/bayes2.png"></p>
