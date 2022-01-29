@@ -6,6 +6,8 @@ Modeling the environment is the most crucial and challenging aspect of a problem
 
 As most data present in the real world is unsupervised, this modeling task becomes super essential.
 
+In this repository, I implemented various generative models to learn the distribution of the MNIST digit dataset and reconstruct the digit images. I have added the result of the models in this readme.
+
 ## Conditional Generative Adversarial Network
 <p align="center"><img src="/images/MNIST_cGAN_generation_animation.gif" height="400px" width="400px"></p>
 
@@ -20,6 +22,10 @@ Reference - https://arxiv.org/abs/1511.06434
 <p align="center"><img src="/images/autoencoderimg.png" height="400px" width="400px"></p>
 
 ### Denoising Autoencoder
+A denoising autoencoder processes a noisy image, generating a clean image on the output side.
+
+In paper, [Extracting and Composing Robust Features with Denoising Autoencoders](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf), the authors repoted that "unsupervised initialization of layers with an explicit denoising criterion helps to capture interesting structure in the input distribution". They were able to improve the robustness of their internal layers of the network (i.e., latent-space representation) by deliberately introducing noise to their signal.
+
 <p align="center"><img src="/images/denoising auto.png" height="220px" width="220px"></p>
 <p align="center">Denoising the MNIST digits</p>
 
@@ -29,6 +35,7 @@ Reference - https://www.jeremyjordan.me/autoencoders/
 <p align="center"><img src="/images/vae-priors.png" height="220px" width="220px">   <img src="/images/vae-reconstructions.png" height="220px" width="220px"></p>
 
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
+
 ## Gaussian Mixture Model
 <p align="center"><img src="/images/gmm syn.png"></p>
 
