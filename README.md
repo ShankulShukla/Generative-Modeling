@@ -9,11 +9,15 @@ As most data present in the real world is unsupervised, this modeling task becom
 In this repository, I implemented various generative models to learn the distribution of the MNIST digit dataset and reconstruct the digit images. I have added the result of the models in this readme.
 
 ## Conditional Generative Adversarial Network
-In GANs we do not deal with explicit distributions, the goal is to reach nash equilibrium of a game. 
+The Generative Adversarial Network (GAN) is one of the most influential ideas of computer science, in which we not only understand the distribution of data using neural networks but we try to improve upon the inference by using two networks: generator and discriminator.
+
+In GANs, we do not deal with explicit distributions; the goal is to reach a nash equilibrium of a game.
 
 Game - generator job is to fool discriminator .. discrimator is to classify correctly.
 
-In GAN, we donot have any control on type of image generated, control on output disadvantage of GANs. CGAN tackles this by inserting label information. So, in cost fucntion we insert condition of label, i.e., we use conditional probability in cost, conditioned on the label y.
+In GAN, we donot have any control on type of image generated, control on output disadvantage of GANs. Conditional Generative Adversarial Network (CGAN) tackles this by inserting label information. So, in cost fucntion we insert condition of label, i.e., we use conditional probability in cost, conditioned on the label y.
+
+I used CGAN to achieve targeted image generation.
 
 > Result 
 
@@ -22,8 +26,11 @@ In GAN, we donot have any control on type of image generated, control on output 
 Reference - https://arxiv.org/abs/1411.1784
 
 ## Deep Convolutional Generative Adversarial Network
+The Deep Convolutional Generative Adversarial Network (DCGAN) brings best of both the worlds i.e., the power of image extraction by convolution and the pragmatic inference of the data by GAN.
 
-Features in DCGAN include batch normalization (adaptive normalisation of data at each layer), conv-> conv-> conv (it is a all convolutional network), adam optimizer, leaky relu for discriminator, for upsampling we use fractionally strided convolution: conv2d transpose does this.
+The DCGAN is important because it suggested the constraints on the model required to effectively develop high-quality generator models in practice. This architecture, in turn, provided the basis for the rapid development of a large number of GAN extensions and applications.
+
+In DCGAN, the discriminator consists of strided convolution layers, batch normalization layers(adaptive normalisation of data at each layer), and LeakyRelu as activation function. The generator consists of convolutional-transpose layers, batch normalization layers, and ReLU activations.
 
 > Result 
 
@@ -70,7 +77,9 @@ ELBO = expected log likelihood + KL divergence
 Reference -  https://arxiv.org/abs/1606.05908, https://www.jeremyjordan.me/variational-autoencoders/
 
 ## Gaussian Mixture Model
+It is basically a latent variable model, we try to model z, "z" latent variable represents basically which cluster data belong to.
 
+Gaussian Mixture Model(GMM) are trained using expectation-maximization(EM), we use EM for latent variable. Goal is to improv3e likelihood at each step.
 > Result 
 
 <p align="center"><img src="/images/gmm syn.png"></p>
